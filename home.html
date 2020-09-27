@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Mega Travel - Home</title>
+	<script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="Welcome.js"></script>
+  <style type="text/css">
+	* {
+        margin: 0;
+        padding: 0;
+    }
+	
+ @media only screen and (min-width: 600px) {
+	#logo {
+		display: block;
+		margin-left: 10px;
+		margin-right: auto;
+		width: 250px;
+	}
+	#WelcomeBar {
+		margin-bottom: 10px;
+	}
+
+	nav {
+		background-color: var(--main-bg-color);
+		color: var(--main-text-color);
+		width: 100%;
+	}
+	nav li a {
+		color: var(--main-text-color);
+		padding-top: 0em;
+	}
+
+	nav li a:hover {
+		color: var(--hover-text-color);
+		animation: nav-hover 0.5s forwards;
+	}
+
+	#intro {
+		width: 50%;
+	}
+
+	.card {
+		border: solid;
+		border-color: #D3D3D3; /* Light Grey */
+		width: 45%;
+		display: inline-block;
+		margin: 5px;
+		height: 400px;
+		vertical-align: top;
+		text-align: left;
+	}
+
+	.card img {
+		width: 85%;
+		height: 55%;
+	}
+
+	.card h1,p {
+		padding-left: 10;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	#logo {
+		display: block;
+		margin-left: 10px;
+		margin-right: auto;
+		width: 250px;
+	}
+	#WelcomeBar {
+		margin-bottom: 10px;
+	}
+
+	nav {
+		background-color: var(--main-bg-color);
+		color: var(--main-text-color);
+		width: 100%;
+	}
+	nav li a {
+		color: var(--main-text-color);
+		padding-top: 0em;
+	}
+
+	nav li a:hover {
+		color: var(--hover-text-color);
+		animation: nav-hover 0.5s forwards;
+	}
+
+	#intro {
+		width: 50%;
+	}
+
+	.card {
+		border: solid;
+		border-color: #D3D3D3; /* Light Grey */
+		width: 30%;
+		display: inline-block;
+		margin: 5px;
+		height: 400px;
+		vertical-align: top;
+		text-align: left;
+	}
+
+	.card img {
+		width: 85%;
+		height: 55%;
+	}
+
+	.card h1,p {
+		padding-left: 10;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+		.card {
+			border: solid;
+			border-color: #D3D3D3; /* Light Grey */
+			width: 23%;
+			display: inline-block;
+			margin: 5px;
+			height: 450px;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.card img {
+			width: 90%;
+			height: 60%;
+		}
+}
+
+@media only screen and (min-width: 2000px) {
+		.card {
+			border: solid;
+			border-color: #D3D3D3; /* Light Grey */
+			width: 24%;
+			display: inline-block;
+			margin: 5px;
+			height: 550px;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.card img {
+			width: 90%;
+			height: 70%;
+		}
+}
+
+@media only screen and (min-width: 2350px) {
+		.card {
+			border: solid;
+			border-color: #D3D3D3; /* Light Grey */
+			width: 24%;
+			display: inline-block;
+			margin: 5px;
+			height: 600px;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.card img {
+			width: 95%;
+			height: 75%;
+		}
+}
+
+
+	nav {
+		text-align: center;
+		padding-bottom: 30px;
+		padding-top: 25px;
+    }
+	
+	nav ul {
+		display: flex;
+		list-style: none;
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: bold;
+	}
+	
+	nav a {
+		color: black;
+		font-weight: bold;
+		display: block;
+		padding: 15px;
+		text-decoration: none;
+		text-align: center;
+		position: relative;
+		top: 0;
+		transition: top .5s, color .5s;
+	}
+	
+	nav a:hover {
+		top: -10px; 
+    	text-decoration: none;
+    	color: red;
+	}
+	
+	h1 {
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: bold;
+		padding-bottom: 15px;
+		padding-left: 10px;
+	}
+	
+	p {
+		font-family: Arial, Helvetica, sans-serif;
+		padding-bottom: 30px;
+		padding-left: 10px;
+	}
+	
+	header {
+		background-color: #add8e6;
+		border-bottom: 15px solid #d3d3d3 ;
+	}
+	
+	footer {
+		background-color: black;
+		color: white;
+		padding-top: 10px;
+	}
+	
+	.product-cards {
+		display: grid;
+		grid-template-columns: auto auto auto auto;
+		margin-bottom: 30px;
+		cursor: pointer;
+    }
+	
+	.product-card:hover{
+		background: black;
+		color: white;
+		font-size: 15px;
+		border-color: white;
+		animation: 2s;
+     }
+	 
+	 .product-card:hover a{
+		color: white;
+	}
+	
+	.product-card {
+		display: inline-block;
+		border: 1px solid black;
+		padding: 10px;
+		margin: 5px;
+	}
+
+	.product-card a {
+		color: black;
+		text-decoration: none;
+	}
+	
+	.product-card img {
+		width: 100%;
+	}
+	
+	.product-card h2 {
+		margin: 30 px 0 15px;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+	
+	.product-card p {
+		line-height: 1;
+	}
+	
+	.original-price {
+		color: gray;
+		text-transform: uppercase;
+	}
+	
+	.current-price span {
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	
+	.saving {
+		color: green;
+	}
+	
+	</style>
+</head>
+<body>
+<label id="lblGreetings"></label>
+	<header>
+	<img src="mega travel logo.png" width="200 px" height="150 px">
+	</header>
+	<nav>
+<!--Need to do this??-->	
+	<div id="WelcomeBar"></div>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="contact.html">Contact Agent</a></li>
+      </ul>
+    </nav>
+<!---???--->
+	<script>
+    var myDate = new Date();
+    var hrs = myDate.getHours();
+
+    var greet;
+
+    if (hrs < 12)
+        greet = 'Good Morning' && img src="moon.png";
+    else if (hrs >= 12 && hrs <= 17)
+        greet = 'Good Afternoon';
+    else if (hrs >= 17 && hrs <= 24)
+        greet = 'Good Evening';
+
+    document.getElementById('lblGreetings').innerHTML =
+        '<b>' + greet + '</b> and welcome to Encodedna.com!';
+</script> 
+<!--????????-->	
+	<div id="root">
+	
+	</div>
+	
+	  <section class="intro">
+	<h1>Travel Packages</h1>
+	<p>We are specialized with International Travels and Tours. Our expertise and experience can save you 100's of dollars in your pocket. Besides your money, you can also save your valuable time at the time of transit or tour. You decide your budget and the time from your comfort zone. We will make it happen for you for an exceptional memory. Mega Travels is committed for an excellent service and support for all of its past, present, and future customers. We are here today only for you. We remind ourself everyday and every moment with a sincere gratitude. </p>
+  </section>
+<section class="product-cards">
+        <div class="product-card">
+      <img src="maldives.png" alt="" />
+      <h2><a href="">Maldives Resort</a></h2>
+      <p class="original-price">$1800.99</p>
+      <p class="current-price">Price you pay <span>$999.99</span></p>
+      <p class="saving">You're saving $801</p>
+    </div>
+
+    <div class="product-card">
+      <img src="mexico.png" alt="" />
+      <h2><a href="">Mexico Resort (All Inclusive!)</a></h2>
+      <p class="original-price">$2999.99</p>
+      <p class="current-price">Price you pay <span>$2199.99</span></p>
+      <p class="saving">You're saving $800</p>
+    </div>
+
+    <div class="product-card">
+      <img src="newzealand.png" alt="" />
+      <h2><a href="">New Zealand Trek</a></h2>
+      <p class="original-price">$2400.00</p>
+      <p class="current-price">Price you pay <span>$2100.00</span></p>
+      <p class="saving">You're saving $399</p>
+    </div>
+
+    <div class="product-card">
+      <img src="venice.png" alt="" />
+      <h2><a href="">Venice, Italy</a></h2>
+      <p class="original-price">$4100.00</p>
+      <p class="current-price">Price you pay <span>$3499.00</span></p>
+      <p class="saving">You're saving $400</p>
+    </div>
+  </section>
+ <footer>
+<p>Copyright produced All rights reserved</p>
+<p>MEGA TRAVELS <br/>
+mega@travels.com</p>
+</footer>
+</body>
+	
+	
