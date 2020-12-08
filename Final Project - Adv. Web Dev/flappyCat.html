@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Flappy Cat - Game!</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="startGame()">	
+	<header>
+	<img src="Assets/flappyCatHeader.png" width="500 px" height="125 px">
+	</header>
+	<nav>
+		<ul>
+		<li><a href="flappyCat.html">Game</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="scores.html">Scores</a></li>
+		</ul>
+    </nav>
+	
+	<!-- JS here -->
+	<div class="game">
+	<script src="game.js"></script>
+	<br>
+	<button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">Float up, Kitty Cat!</button>
+	</div>
+</body>
+
+<footer>
+	<p>ITC 475-899 | Advanced Web Development | Final Project | Ellen Neske</p>
+	<p>Sources used: <a href="https://www.w3schools.com/graphics/game_images.asp" target="blank">W3Schools.com</a></br></p>
+	<p>FLAPPY CAT! - 2020</P>
+</footer>
+</html>
+	
+	
